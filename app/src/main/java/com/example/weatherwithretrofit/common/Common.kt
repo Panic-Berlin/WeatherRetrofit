@@ -1,4 +1,4 @@
-package com.example.weatherwithretrofit.Common
+package com.example.weatherwithretrofit.common
 
 import com.example.weatherwithretrofit.retrofit.RetrofitClient
 import com.example.weatherwithretrofit.retrofit.SearchService

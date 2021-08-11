@@ -15,9 +15,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="qwerty"
+
         app:titleMarginStart="40dp"
         >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <ImageView
             android:layout_margin="5dp"
             android:id="@+id/pin"
@@ -29,9 +34,6 @@
             />
 
     </androidx.appcompat.widget.Toolbar>
-
-
-
 
 
     <TextView
@@ -97,6 +99,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/five_day"
         tools:listitem="@layout/five_days_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/night"
         android:layout_width="match_parent"
