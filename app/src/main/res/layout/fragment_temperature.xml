@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:hapticFeedbackEnabled="true"
+        android:background="@color/white"
+        android:id="@+id/tb_city"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="qwerty"
+        app:titleMarginStart="40dp"
+        >
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/pin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_pin"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/tb_city"
+        app:layout_constraintRight_toRightOf="@id/tb_city"
+        app:layout_constraintLeft_toLeftOf="@id/tb_city"
+        android:layout_marginRight="140dp"
+        android:padding="10dp"
+        android:background="@drawable/local_item_background"
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="26°C"
+        android:textSize="64sp"/>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:id="@+id/status"
+        android:layout_width="0dp"
+        android:textAlignment="textEnd"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/maxMin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/temperature"
+        app:layout_constraintTop_toBottomOf="@+id/tb_city"
+        tools:text="Ясно" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/status"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/maxMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="22°/36°"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/temperature"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Днем"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/night"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/day"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+        tools:text="Вечером"
+        android:textSize="16sp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/five_day"
+        tools:listitem="@layout/five_days_item"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/night"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/test"
+        app:layout_constraintTop_toBottomOf="@id/five_day"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

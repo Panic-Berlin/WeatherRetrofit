@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeatherWithRetrofit</string>
+    <string name="top_50_city">Топ 50 городов</string>
+    <string name="search_text">Поиск</string>
+</resources>
